@@ -1,0 +1,125 @@
+@use "../helpers/animation" ;
+
+
+$light-gray : #666;
+$dark-light: #ececec;
+$skyblue : #2196f3;
+
+
+.landing {
+    position: relative;
+
+    .container {
+
+        min-height: calc(100vh - 72px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 7.5em;
+
+        .text {
+            flex: 1;
+
+            h1 {
+                font-size: 40px;
+                margin: 0;
+                letter-spacing: -1px;
+
+                // Small
+                @media (max-width: 767.8px) {
+                    font-size: 27px;
+                    margin-bottom: 20px;
+                }
+            }
+            p {
+                color: $light-gray;
+                line-height: 1.7;
+                font-size: 1.42rem;
+                margin-top: 0.3125em;
+                max-width: 33em;
+
+                // Small
+                @media (max-width: 767.8px) {
+                    font-size: 16px;
+                    line-height: 2;
+                }
+            }
+
+            // Medium
+            @media (max-width: 991.8px) {
+                text-align: center;
+            }
+        }
+
+        .img {
+
+            img {
+                z-index: -1;
+                position: relative;
+                width: 37.5em;
+                animation: up-and-down 5s linear infinite;
+            }
+
+            // Medium
+            @media (max-width: 991.8px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.landing {
+    // overflow: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $dark-light;
+        z-index: -1;
+        transform: skewY(-6deg);
+        transform-origin: top left;
+
+        // Small
+        @media (max-width: 767.8px) {
+            transform: skewY(-10deg);
+        }
+    }
+}
+
+.landing {
+    > a {
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        transform: translateX(-50%);
+
+        svg {
+            color: $skyblue;
+            animation: bouncing 1.5s infinite;
+
+            // Small
+            @media (max-width: 767.8px) {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+// Small
+@media (max-width: 767.8px) {
+
+}
+
+// Medium
+@media (max-width: 991.8px) {
+
+}
+
+// Large
+@media (max-width: 1199.8px) {
+
+}

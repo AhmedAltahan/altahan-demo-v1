@@ -1,0 +1,29 @@
+
+// Start up-and-down animation
+@keyframes up-and-down {
+    0%,
+    100% {
+        top: 0;
+    }
+    50% {
+        top: -50px;
+    }
+    }
+// End up-and-down animation
+
+// Start Bouncing animation
+@keyframes bouncing {
+    0%,
+    10%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40%,
+    60% {
+        transform: translateY(-15px);
+    }
+    }
+// End Bouncing animation
