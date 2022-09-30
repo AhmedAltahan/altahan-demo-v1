@@ -27,3 +27,38 @@
     }
     }
 // End Bouncing animation
+@keyframes moving-arrow {
+    100% {
+        transform: translateX(7px);
+    }
+}
+// **************************************
+
+@keyframes left-move {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        left: 0;
+        border-radius: 0;
+        width: 50%;
+        height: 100%;
+    }
+    }
+    @keyframes right-move {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        right: 0;
+        border-radius: 0;
+        width: 50%;
+        height: 100%;
+    }
+}
+
+// ********************************************

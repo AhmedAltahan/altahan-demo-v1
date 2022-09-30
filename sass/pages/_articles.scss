@@ -1,0 +1,104 @@
+
+@use "../helpers/animation";
+@use "../helpers/custom-design";
+
+
+$blue : #2196f3;
+$white :white;
+$black :black;
+$shadow :rgb(0 0 0 / 10%); 
+$shadow-hover :rgb(0 0 0 / 20%); 
+$gray : #777;
+$gray-v2 : #e6e6e7;
+
+
+.articles {
+
+    padding: 6.25em 0;
+    position: relative;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+        gap: 40px;
+    }
+}
+
+.container {
+    
+    .box {
+
+        box-shadow: 0 2px 15px $shadow;
+        border-radius: 6px;
+        overflow: hidden;
+
+        transition: 0.3s;
+
+        img {
+            max-width: 100%;
+        }
+
+        .content {
+            padding: 1.3em;
+            h3 {
+
+            }
+
+            p {
+                line-height: 1.5;
+                margin-top: 0.625rem;
+                color: $gray;
+            }
+        }
+
+        .info {
+            @extend .content;
+            display: flex;
+            justify-content: space-between;
+            color: $blue;
+            border-top: 1px solid $gray-v2;
+
+            a {
+                color: $blue;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 2px 15px $shadow-hover;
+
+    .info {
+        svg {
+            animation: moving-arrow 0.5s linear infinite;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+// Small
+@media (max-width: 767.8px) {
+
+}
+
+// Medium
+@media (max-width: 991.8px) {
+
+}
+
+// Large
+@media (max-width: 1199.8px) {
+
+}
