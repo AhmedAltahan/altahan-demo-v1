@@ -139,6 +139,32 @@ a {
     height: 100%;
   }
 }
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
 .main-title h2 {
   text-transform: uppercase;
   padding: 10px 20px;
@@ -152,6 +178,7 @@ a {
   margin-right: auto;
   position: relative;
   transition: 0.3s;
+  z-index: 3;
 }
 .main-title h2:before {
   content: "";
@@ -179,6 +206,8 @@ a {
   background-color: #2196f3;
   color: white;
   transition-delay: 0.5s;
+  border-color: white;
+  z-index: 2;
 }
 .main-title h2:hover:before {
   -webkit-animation: left-move 0.5s linear forwards;
@@ -189,6 +218,19 @@ a {
   -webkit-animation: right-move 0.5s linear forwards;
           animation: right-move 0.5s linear forwards;
   z-index: -1;
+}
+
+.spikes {
+  position: relative;
+}
+.spikes:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+  background-size: 30px 30px;
 }
 
 header {
@@ -504,4 +546,47 @@ header .container > ul .li-mega .mega .links-mega > li a svg {
 .box:hover .info svg {
   -webkit-animation: moving-arrow 0.5s linear infinite;
           animation: moving-arrow 0.5s linear infinite;
+}
+
+.gallery {
+  padding: 6.25rem 0;
+  background-color: #ececec;
+}
+.gallery .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+.gallery .container .card {
+  padding: 0.94rem;
+  background-color: white;
+  box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.13), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+.gallery .container .card .image {
+  position: relative;
+  overflow: hidden;
+}
+.gallery .container .card .image::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.4s;
+  z-index: 2;
+  opacity: 0;
+}
+.gallery .container .card .image:hover::before {
+  -webkit-animation: flash 0.7s;
+          animation: flash 0.7s;
+}
+.gallery .container .card .image img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+.gallery .container .card .image img:hover {
+  transform: scale(1.1) rotate(5deg);
 }/*# sourceMappingURL=main.css.map */

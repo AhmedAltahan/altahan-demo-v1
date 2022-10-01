@@ -1,0 +1,63 @@
+
+@use "../helpers/animation" ;
+
+$white :white;
+$white-v2 :rgb(255 255 255 / 20%);
+$dark-white : #ececec;
+
+$black : black ;
+
+$shadow-v1 : rgb(0 0 0 / 13%);
+$shadow-v2 :rgb(0 0 0 / 12%);
+
+
+.gallery {
+
+    padding: 6.25rem 0;
+    background-color: $dark-white;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+        gap: 2.5rem;
+
+
+        .card {
+            padding: 0.94rem;
+            background-color: $white;
+            box-shadow: 0 12px 20px 0 $shadow-v1 , 
+                        0 2px 4px 0 $shadow-v2;
+
+            .image {
+                position: relative;
+                overflow: hidden;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    background-color: $white-v2;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50% , -50%);
+                    transition: 0.4s;
+                    z-index: 2;
+                    opacity: 0;
+                }
+                &:hover::before {
+                    animation: flash 0.7s;
+                }
+
+                img {
+                    max-width: 100%;
+                    transition: 0.3s;
+
+                    &:hover {
+                        transform: scale(1.1)  rotate(5deg);
+                    }
+                }
+            }
+        }
+    }
+}
