@@ -587,6 +587,201 @@ header .container > ul .li-mega .mega .links-mega > li a svg {
   max-width: 100%;
   transition: 0.3s;
 }
-.gallery .container .card .image img:hover {
+.gallery .container .card .image:hover img {
   transform: scale(1.1) rotate(5deg);
+}
+
+.feature {
+  padding: 6.25rem 0;
+}
+
+.feature .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5em;
+}
+
+.container .content {
+  border: 1px solid #ccc;
+}
+.container .content .image img {
+  width: 100%;
+}
+
+.content .img1 {
+  position: relative;
+  overflow: hidden;
+}
+.content .img1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 150, 136, 0.6);
+}
+.content .img1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 0 170px 500px;
+  border-color: transparent transparent white transparent;
+  transition: 0.3s;
+}
+.content .img2 {
+  position: relative;
+  overflow: hidden;
+}
+.content .img2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244, 64, 54, 0.6);
+}
+.content .img2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 0 170px 500px;
+  border-color: transparent transparent white transparent;
+  transition: 0.3s;
+}
+.content .img3 {
+  position: relative;
+  overflow: hidden;
+}
+.content .img3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 169, 244, 0.6);
+}
+.content .img3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 0 170px 500px;
+  border-color: transparent transparent white transparent;
+  transition: 0.3s;
+}
+
+.content .text h2 {
+  font-size: 2.5rem;
+  color: black;
+  text-transform: capitalize;
+  text-align: center;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+.content .text h2::after {
+  content: "";
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+}
+.content .text p {
+  color: #777777;
+  font-size: 1.25rem;
+  line-height: 2;
+  text-align: center;
+  padding: 1.5625em;
+  margin: 1.875em 0;
+}
+
+.content .link {
+  display: flex;
+  justify-content: center;
+}
+.content .link a {
+  font-size: 1.375rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 0.625rem 1.875rem;
+  border-radius: 8px;
+  border: 3px solid;
+  margin-bottom: 1.875em;
+  position: relative;
+  transition: 0.4s;
+  overflow: hidden;
+}
+.content .link a::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -152%;
+  width: 150%;
+  height: 120%;
+  z-index: -1;
+  transition: 0.7s;
+}
+.content .link .a2 {
+  color: rgba(244, 64, 54, 0.6);
+  border-color: rgba(244, 64, 54, 0.6);
+}
+.content .link .a2::before {
+  background-color: rgba(244, 64, 54, 0.6);
+}
+.content .link .a1 {
+  color: rgba(0, 150, 136, 0.6);
+  border-color: rgba(0, 150, 136, 0.6);
+}
+.content .link .a1::before {
+  background-color: rgba(0, 150, 136, 0.6);
+}
+.content .link .a3 {
+  color: rgba(3, 169, 244, 0.6);
+  border-color: rgba(3, 169, 244, 0.6);
+}
+.content .link .a3::before {
+  background-color: rgba(3, 169, 244, 0.6);
+}
+
+.content .text .v1::after {
+  background-color: #009688;
+}
+.content .text .v2::after {
+  background-color: #f44036;
+}
+.content .text .v3::after {
+  background-color: #03a9f4;
+}
+
+.content:hover .link a {
+  color: white;
+}
+.content:hover .link a::before {
+  left: -10%;
+}
+
+.content:hover .img1:after {
+  border-width: 170px 500px 170px 0;
+  border-color: transparent transparent white transparent;
+}
+
+.content:hover .img2:after {
+  border-width: 170px 500px 170px 0;
+  border-color: transparent transparent white transparent;
+}
+
+.content:hover .img3:after {
+  border-width: 170px 500px 170px 0;
+  border-color: transparent transparent white transparent;
 }/*# sourceMappingURL=main.css.map */
