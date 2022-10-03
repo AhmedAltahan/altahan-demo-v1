@@ -1,0 +1,72 @@
+
+$white :white;
+$black : black;
+$gray :#777;
+$gray-v1 :#ececec;
+$gray-v2 :rgb(0 0 0 / 7%);
+$gold : #ffc107;
+
+
+.testemonials {
+    padding: 6.25em 0;
+    background-color: $gray-v1;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+        gap: 2.5rem;
+    }
+}
+
+.container {
+    .box-v1 {
+        position: relative;
+        .image {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 10px solid $gray-v1;
+            overflow: hidden;
+            position: absolute;
+            right: -10px;
+            top: -50px;
+            
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.box-v1 {
+    .content-v1 {
+        padding: 1.25em;
+        box-shadow: 0 2px 4px $gray-v2;
+        background-color: $white;
+
+        h3 {
+            margin-bottom: 0.625em;
+        }
+
+        p.title {
+            margin-bottom: 0.625em;
+            color: $gray;
+            text-transform: capitalize;
+        }
+
+        p.text {
+            margin-top: 0.625em;
+            line-height: 1.5;
+            color:$gray ;
+        }
+    }
+}
+
+.content-v1 {
+    .rate {
+        .filled {
+            color: $gold;
+            
+        }
+    }
+}
