@@ -1,0 +1,119 @@
+
+
+$white :white;
+$black : black;
+$gray-v1 :#ececec;
+$gray-v2 :#f9f9f9;
+$gray-v3 :#d5d5d5;
+$shadow-v1 : rgb(0 0 0 / 13%);
+$shadow-v2 :rgb(0 0 0 / 12%);
+$blue : #2196f3;
+
+
+.services {
+    padding: 6.25em 0;
+    background-color: $gray-v1;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+        gap: 2.5em;
+
+        .card {
+            background-color: $white;
+            box-shadow: 0 12px 20px 0 $shadow-v1,
+                        0 2px 4px 0 $shadow-v2;
+            transition: 0.3s;
+            position: relative;
+            counter-increment: services;
+        }
+    }
+}
+
+.services {
+    .container {
+        .card {
+            .top {
+                text-align: center;
+
+                svg {
+                    color: $gray-v1;
+                    margin: 1.875rem 0 1.25rem;
+                }
+
+                h3 {
+                    color: $blue;
+                    font-size: 1.56rem;
+                    margin: 1.25rem 0 2.5rem;
+                }
+            }
+        }
+    }
+}
+
+.services {
+    .container {
+        .card {
+            .bottom {
+                padding: 0.9375rem;
+                text-align: end;
+                background-color: $gray-v2;
+                position: relative;
+
+                &:before {
+                    content: "0" counter(services);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 80px;
+                    padding-right: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.875rem;
+                    color: $white;
+                    font-weight: bold;
+                    background-color: $blue;
+                    
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 70px;
+                    top: 0;
+                    height: 100%;
+                    width: 50px;
+                    background-color: $gray-v3;
+                    transform: skewX(-30deg);
+                }
+
+                a {
+                    color: $blue;
+                    display: block;
+                    text-transform: capitalize;
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 3px;
+                background-color: $blue;
+                transition: 0.3s;
+            }
+
+            &:hover {
+                transform: translatey(-7px);
+            }
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+}

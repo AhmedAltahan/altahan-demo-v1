@@ -935,4 +935,89 @@ header .container > ul .li-mega .mega .links-mega > li a svg {
   text-transform: capitalize;
   margin-top: 0.625em;
   margin-bottom: 1.5625em;
+}
+
+.services {
+  padding: 6.25em 0;
+  background-color: #ececec;
+}
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5em;
+}
+.services .container .card {
+  background-color: white;
+  box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.13), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.3s;
+  position: relative;
+  counter-increment: services;
+}
+
+.services .container .card .top {
+  text-align: center;
+}
+.services .container .card .top svg {
+  color: #ececec;
+  margin: 1.875rem 0 1.25rem;
+}
+.services .container .card .top h3 {
+  color: #2196f3;
+  font-size: 1.56rem;
+  margin: 1.25rem 0 2.5rem;
+}
+
+.services .container .card .bottom {
+  padding: 0.9375rem;
+  text-align: end;
+  background-color: #f9f9f9;
+  position: relative;
+}
+.services .container .card .bottom:before {
+  content: "0" counter(services);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.875rem;
+  color: white;
+  font-weight: bold;
+  background-color: #2196f3;
+}
+.services .container .card .bottom:after {
+  content: "";
+  position: absolute;
+  left: 70px;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background-color: #d5d5d5;
+  transform: skewX(-30deg);
+}
+.services .container .card .bottom a {
+  color: #2196f3;
+  display: block;
+  text-transform: capitalize;
+}
+.services .container .card::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #2196f3;
+  transition: 0.3s;
+}
+.services .container .card:hover {
+  transform: translatey(-7px);
+}
+.services .container .card:hover::before {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
