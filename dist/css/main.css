@@ -522,6 +522,7 @@ header .container > ul .li-mega .mega .links-mega > li a svg {
 }
 .container .box .content, .container .box .info {
   padding: 1.3em;
+  border: none;
 }
 .container .box .content p, .container .box .info p {
   line-height: 1.5;
@@ -834,4 +835,104 @@ header .container > ul .li-mega .mega .links-mega > li a svg {
 
 .content-v1 .rate .filled {
   color: #ffc107;
+}
+
+.team {
+  padding: 6.25em 0;
+  background-color: white;
+}
+.team .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5em;
+}
+
+.team .container .t-box {
+  padding-top: 60px;
+  position: relative;
+}
+.team .container .t-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: calc(100% - 60px);
+  border-radius: 10px;
+  background-color: #f3f3f3;
+  z-index: 1;
+}
+.team .container .t-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  background-color: #ececec;
+  z-index: 2;
+  transition: 0.4s;
+}
+.team .container .t-box:hover::after {
+  width: calc(100% - 60px);
+}
+.team .container .t-box:hover img {
+  filter: grayscale(100%);
+}
+.team .container .t-box:hover .t-content {
+  filter: grayscale(100%);
+}
+.team .container .t-box .t-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team .container .t-box .t-main .image {
+  z-index: 10;
+}
+.team .container .t-box .t-main .image img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.team .container .t-box .t-main .social-icons {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+.team .container .t-box .t-main .social-icons a {
+  display: flex;
+  color: #777;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 30px;
+  transition: 0.3s;
+}
+.team .container .t-box .t-main .social-icons a:hover {
+  color: #2196f3;
+}
+
+.t-box .t-content {
+  position: relative;
+  z-index: 10;
+  padding-left: 5em;
+}
+.t-box .t-content h3 {
+  color: #2196f3;
+  font-size: 1.375rem;
+  text-transform: capitalize;
+  margin-top: 0.75em;
+}
+.t-box .t-content p {
+  text-transform: capitalize;
+  margin-top: 0.625em;
+  margin-bottom: 1.5625em;
 }/*# sourceMappingURL=main.css.map */

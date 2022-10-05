@@ -1,0 +1,141 @@
+
+@use "../helpers/animation" ;
+
+$white :white;
+$black : black;
+$gray :#777;
+$gray-v1 :#ececec;
+$gray-v2 :#f3f3f3;
+$blue : #2196f3;
+
+
+.team {
+    padding: 6.25em 0;
+    background-color: $white;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+        gap: 2.5em;
+
+    }
+}
+
+.team {
+    
+    .container {
+        .t-box {
+            padding-top: 60px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: calc(100% - 60px);
+                border-radius: 10px;
+                background-color: $gray-v2;
+                z-index: 1;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 0;
+                // width: calc(100% - 60px);
+                border-radius: 10px;
+                background-color: $gray-v1;
+                z-index: 2;
+                transition: 0.4s;
+            }
+
+            &:hover::after {
+                width: calc(100% - 60px);
+            }
+
+
+            &:hover img {
+                filter: grayscale(100%);
+            }
+
+            &:hover .t-content {
+                filter: grayscale(100%);
+            }
+
+            .t-main {
+                display: flex;
+                // background-color: pink;
+                justify-content: center;
+                align-items: center;
+                
+
+                .image {
+                    z-index: 10;
+                    img {
+                        width: 100%;
+                        border-radius: 10px;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.team {
+    .container {
+        .t-box {
+            .t-main {
+                .social-icons {
+                    z-index: 10;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 60px;
+                    column-gap: 20px;
+                    row-gap: 20px;
+
+                    a {
+                        display: flex;
+                        color: $gray;
+                        align-items: center;
+                        justify-content: center;
+                        width: 60px;
+                        height: 30px;
+                        transition: 0.3s;
+
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.t-box {
+
+    .t-content {
+        position: relative;
+        z-index: 10;
+        padding-left: 5em;
+        h3 {
+            color: $blue;
+            font-size: 1.375rem;
+            text-transform: capitalize;
+            margin-top: 0.75em;
+        }
+
+        p {
+            text-transform: capitalize;
+            margin-top: 0.625em;
+            margin-bottom: 1.5625em;
+        }
+    }
+}
