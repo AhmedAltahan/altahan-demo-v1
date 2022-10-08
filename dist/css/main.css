@@ -1068,11 +1068,20 @@ header .container > ul .li-mega .mega .links-mega > li a svg {
 
 .how {
   background-color: #ececec;
-  padding: 6.25rem;
+  padding: 6.25rem 0;
+  overflow: hidden;
 }
 
+@media (max-width: 472px) {
+  .how .main-title h2 {
+    font-size: 1.45rem !important;
+    text-align: center;
+  }
+}
 .how .container {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 992px) {
   .how .container {
@@ -1100,10 +1109,24 @@ header .container > ul .li-mega .mega .links-mega > li a svg {
   align-items: center;
   position: relative;
 }
+@media (max-width: 649px) {
+  .how .container .info .info-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .how .container .info .info-box img {
   width: 64px;
   height: 64px;
   margin-right: 1.875rem;
+}
+@media (max-width: 649px) {
+  .how .container .info .info-box img {
+    margin-right: 0;
+    margin-bottom: 1.2rem;
+    width: 58px;
+    height: 58px;
+  }
 }
 .how .container .info .info-box .text h3 {
   font-size: 1.375rem;
@@ -1113,4 +1136,9 @@ header .container > ul .li-mega .mega .links-mega > li a svg {
   margin: 0.625rem 0 0;
   color: #777;
   line-height: 1.7;
+}
+@media (max-width: 649px) {
+  .how .container .info .info-box .text p {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=main.css.map */
