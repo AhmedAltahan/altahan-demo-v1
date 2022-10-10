@@ -1161,4 +1161,148 @@ header .container > ul .li-mega .mega .links-mega > li a svg {
   .how .container .info .info-box .text p {
     font-size: 1rem;
   }
+}
+
+.events {
+  padding: 6.25rem 0;
+  position: relative;
+}
+.events .container {
+  display: flex;
+  flex-direction: column;
+}
+.events .container .top-events {
+  display: flex;
+}
+.events .container img {
+  max-width: 28.125rem;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .events .container img {
+    display: none;
+  }
+}
+.events .container .content-events {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.events .container .content-events .text-events h2 {
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+}
+.events .container .content-events .text-events p {
+  color: #777;
+  font-size: 1.18rem;
+  margin: 1.18rem 0;
+  line-height: 1.7;
+}
+
+.top-events .content-events .time {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+  justify-content: center;
+}
+.top-events .content-events .time .time-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  width: 4.6875rem;
+  transition: 0.4s;
+}
+.top-events .content-events .time .time-box:hover {
+  border-color: #2196f3;
+}
+.top-events .content-events .time .time-box:hover span:last-child {
+  border-color: #2196f3;
+}
+.top-events .content-events .time .time-box span:first-child {
+  font-size: 2.1875rem;
+  padding: 0.9375rem;
+  font-weight: bold;
+  color: #2196f3;
+}
+.top-events .content-events .time .time-box span:last-child {
+  color: black;
+  font-size: 0.8125rem;
+  border-top: 1px solid #d4d4d4;
+  padding: 8px 10px;
+  transition: 0.4s;
+}
+
+.container .subscripe {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  background-color: #f6f5f5;
+  width: 50%;
+  margin: 3.125rem auto 0;
+  padding: 1.875rem;
+  border-radius: 3.125rem;
+}
+@media (max-width: 992px) {
+  .container .subscripe {
+    width: 75%;
+  }
+}
+@media (max-width: 648px) {
+  .container .subscripe {
+    width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .container .subscripe {
+    width: 100%;
+  }
+}
+.container .subscripe input[type=email] {
+  border: white;
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: 3.125rem;
+  width: 100%;
+}
+.container .subscripe button {
+  color: white;
+  background-color: #2196f3;
+  border: #2196f3;
+  padding: 20px;
+  border-radius: 3.125rem;
+  font-weight: bold;
+  flex: 1;
+}
+@media (max-width: 648px) {
+  .container .subscripe button {
+    padding: 10px;
+  }
+}
+
+.subscripe button {
+  cursor: pointer;
+}
+
+.events .dots {
+  background-image: url(../../assets/images/dots.png);
+  width: 12.75rem;
+  height: 11.625rem;
+  position: absolute;
+}
+@media (max-width: 832px) {
+  .events .dots {
+    opacity: 0.2;
+  }
+}
+.events .dots-top {
+  right: 0;
+  top: 100px;
+}
+.events .dots.bottom {
+  left: 0;
+  bottom: -50px;
 }/*# sourceMappingURL=main.css.map */
