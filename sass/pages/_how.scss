@@ -3,6 +3,7 @@
 $gray : #ececec;
 $gray-v1 :#777;
 $gray-v2 :#f6f6f6;
+$gray-v3 :#ededed;
 $white:white;
 
 
@@ -63,7 +64,26 @@ $white:white;
                     text-align: center;
                 }
 
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 0%;
+                    height: 0%;
+                    z-index: 0;
+                    transform: translate(-50% , -50%);
+                    background-color: $gray-v3 ;
+                    transition: 0.2s;
+                }
+
+                &:hover::before {
+                    width: 100%;
+                    height: 100%;
+                }
+
                 img {
+                    z-index: 1;
                     width: 64px;
                     height: 64px;
                     margin-right: 1.875rem;
@@ -77,6 +97,7 @@ $white:white;
                 }
 
                 .text {
+                    z-index: 1;
                     h3 {
                         font-size: 1.375rem;
                     }

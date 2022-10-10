@@ -1115,7 +1115,24 @@ header .container > ul .li-mega .mega .links-mega > li a svg {
     text-align: center;
   }
 }
+.how .container .info .info-box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0%;
+  height: 0%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  background-color: #ededed;
+  transition: 0.2s;
+}
+.how .container .info .info-box:hover::before {
+  width: 100%;
+  height: 100%;
+}
 .how .container .info .info-box img {
+  z-index: 1;
   width: 64px;
   height: 64px;
   margin-right: 1.875rem;
@@ -1127,6 +1144,9 @@ header .container > ul .li-mega .mega .links-mega > li a svg {
     width: 58px;
     height: 58px;
   }
+}
+.how .container .info .info-box .text {
+  z-index: 1;
 }
 .how .container .info .info-box .text h3 {
   font-size: 1.375rem;
