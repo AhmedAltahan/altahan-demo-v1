@@ -1,0 +1,183 @@
+
+$gray : #ececec;
+$gray-v1 : #777;
+$gray-v2 : #f6f6f6;
+$gray-v3 : #eee;
+$white :white;
+$black : #000;
+$blue : #2196f3;
+$blue-v1 : #1787e0;
+
+.price {
+    padding: 6.25rem 0;
+    background-color: $gray;
+}
+
+.price {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+        gap: 2rem;
+    }
+}
+
+.price {
+    .container {
+        .price-card {
+            display: flex;
+            flex-direction: column;
+            background-color: $white;
+            box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+
+            h3 {
+                z-index: 1;
+                font-size: 20px;
+                margin: 30px auto;
+            }
+
+            img {
+                z-index: 1;
+                width: 5rem;
+                margin: 0 auto 30px;
+            }
+
+            .one {
+                z-index: 1;
+                font-size: 60px;
+                color: $blue;
+                margin: 0 auto 5px;
+                font-weight: bold;
+            }
+
+            .two {
+                z-index: 1;
+                margin: 0 auto 20px;
+
+            }
+        }
+    }
+}
+
+.price {
+    .container {
+        .price-card {
+            ul {
+                z-index: 1;
+                li {
+                    padding: 20px;
+                    border-top: 1px solid $gray-v3;
+                    position: relative;
+
+                    &::before {
+                        font-family: "Font Awesome 5 Free";
+                        content: "\f00c";
+                        margin-right: 10px;
+                        font-weight: bold;
+                        color: $blue;
+                    }
+                }
+            }
+
+            a {
+                z-index: 1;
+                margin: 30px auto 40px;
+                padding: 15px 20px;
+                border: 2px solid $blue;
+                border-radius: 5px;
+                color: $blue;
+                font-weight: bold;
+                transition: 0.4s;
+
+                &:hover {
+                    background-color: $blue-v1;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.price {
+    .container {
+        .card-price-middle {
+            position: relative;
+            bottom: 15px;
+            @media (max-width:1200px) {
+                bottom: 0;
+            }
+
+            .sticky-note {
+                position: absolute;
+                padding: 10px 10px 35px 10px;
+                writing-mode: vertical-rl;
+                font-size: 18px;
+                width: 40px;
+                background-color: $blue;
+                color: $white;
+                font-weight: bold;
+                right: 6%;
+
+                &::after {
+                    content: "";
+                    background-color: transparent;
+                    border: 20px solid;
+                    border-color: transparent transparent $white transparent;
+                    // width: 40px;
+                    // height: 40px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    transition: 0.8s;
+                }
+            }
+
+            &:hover {
+                .sticky-note::after {
+                    border-color: transparent transparent $gray-v2 transparent;
+
+                }
+            }
+        }
+    }
+}
+
+
+.price {
+    .container {
+        .price-card {
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                position: absolute;
+                content: "";
+                background-color: $gray-v2;
+                width: 0;
+                height: 50%;
+                top: 0;
+                left: 0;
+                transition: 0.7s;
+            }
+
+            &:hover::before {
+                width: 150%;
+            }
+
+            &::after{
+                position: absolute;
+                content: "";
+                background-color: $gray-v2;
+                width: 0;
+                height: 50%;
+                bottom: 0;
+                right: 0;
+                transition: 0.5s;
+
+            }
+
+            &:hover::after {
+                width: 150%;
+            }
+        }
+    }
+}

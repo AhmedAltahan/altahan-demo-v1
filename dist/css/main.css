@@ -1268,6 +1268,19 @@ header .container > ul .li-mega .mega .links-mega > li a svg {
   border-radius: 3.125rem;
   width: 100%;
 }
+.container .subscripe input[type=email]:focus {
+  outline: none;
+  caret-color: #2196f3;
+}
+.container .subscripe input[type=email]:focus::-moz-placeholder {
+  opacity: 0.3;
+}
+.container .subscripe input[type=email]:focus:-ms-input-placeholder {
+  opacity: 0.3;
+}
+.container .subscripe input[type=email]:focus::placeholder {
+  opacity: 0.3;
+}
 .container .subscripe button {
   color: white;
   background-color: #2196f3;
@@ -1305,4 +1318,139 @@ header .container > ul .li-mega .mega .links-mega > li a svg {
 .events .dots.bottom {
   left: 0;
   bottom: -50px;
+}
+
+.price {
+  padding: 6.25rem 0;
+  background-color: #ececec;
+}
+
+.price .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.price .container .price-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.13), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+.price .container .price-card h3 {
+  z-index: 1;
+  font-size: 20px;
+  margin: 30px auto;
+}
+.price .container .price-card img {
+  z-index: 1;
+  width: 5rem;
+  margin: 0 auto 30px;
+}
+.price .container .price-card .one {
+  z-index: 1;
+  font-size: 60px;
+  color: #2196f3;
+  margin: 0 auto 5px;
+  font-weight: bold;
+}
+.price .container .price-card .two {
+  z-index: 1;
+  margin: 0 auto 20px;
+}
+
+.price .container .price-card ul {
+  z-index: 1;
+}
+.price .container .price-card ul li {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  position: relative;
+}
+.price .container .price-card ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  margin-right: 10px;
+  font-weight: bold;
+  color: #2196f3;
+}
+.price .container .price-card a {
+  z-index: 1;
+  margin: 30px auto 40px;
+  padding: 15px 20px;
+  border: 2px solid #2196f3;
+  border-radius: 5px;
+  color: #2196f3;
+  font-weight: bold;
+  transition: 0.4s;
+}
+.price .container .price-card a:hover {
+  background-color: #1787e0;
+  color: white;
+}
+
+.price .container .card-price-middle {
+  position: relative;
+  bottom: 15px;
+}
+@media (max-width: 1200px) {
+  .price .container .card-price-middle {
+    bottom: 0;
+  }
+}
+.price .container .card-price-middle .sticky-note {
+  position: absolute;
+  padding: 10px 10px 35px 10px;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  font-size: 18px;
+  width: 40px;
+  background-color: #2196f3;
+  color: white;
+  font-weight: bold;
+  right: 6%;
+}
+.price .container .card-price-middle .sticky-note::after {
+  content: "";
+  background-color: transparent;
+  border: 20px solid;
+  border-color: transparent transparent white transparent;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 0.8s;
+}
+.price .container .card-price-middle:hover .sticky-note::after {
+  border-color: transparent transparent #f6f6f6 transparent;
+}
+
+.price .container .price-card {
+  position: relative;
+  overflow: hidden;
+}
+.price .container .price-card::before {
+  position: absolute;
+  content: "";
+  background-color: #f6f6f6;
+  width: 0;
+  height: 50%;
+  top: 0;
+  left: 0;
+  transition: 0.7s;
+}
+.price .container .price-card:hover::before {
+  width: 150%;
+}
+.price .container .price-card::after {
+  position: absolute;
+  content: "";
+  background-color: #f6f6f6;
+  width: 0;
+  height: 50%;
+  bottom: 0;
+  right: 0;
+  transition: 0.5s;
+}
+.price .container .price-card:hover::after {
+  width: 150%;
 }/*# sourceMappingURL=main.css.map */

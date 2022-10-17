@@ -127,6 +127,14 @@ $blue : #2196f3 ;
             padding: 1.25rem;
             border-radius: 3.125rem;
             width: 100%;
+
+            &:focus {
+                outline: none;
+                caret-color: $blue;
+            }
+            &:focus::placeholder {
+                opacity: 0.3;
+            }
             
         }
 
