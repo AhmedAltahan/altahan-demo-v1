@@ -1,0 +1,112 @@
+
+$white: white;
+$gray :#f9f9f9;
+$gray-v1 :#ccc;
+$blue : #2196f3;
+$blue-v1 : #1787e0f7;
+$blue-v2-overlay : rgb(23 135 224 / 97%);
+
+.request {
+    display: flex;
+    min-height: 100vh;
+
+    @media (max-width : 845px) {
+        flex-direction: column;
+    }
+}
+
+.request {
+    .partOne {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+        background-color: $blue-v1;
+        flex-basis: 50%;
+        color: $white;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width : 845px) {
+            padding: 70px 0;
+        }
+        
+        h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        p {
+            line-height: 1.7;
+            max-width: 90%;
+            margin-bottom: 40px;
+        }
+
+        img {
+            max-width: 100%;
+            width: 300px;
+        }
+    }
+}
+
+.request {
+    .partTwo {
+        display: flex;
+        flex-basis: 50%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @media (max-width : 845px) {
+            padding: 50px 0;
+        }
+
+        h2 {
+            font-size: 40px;
+            margin: 40px 0;
+        }
+
+        form {
+            text-align: center;
+
+            input {
+                display: block;
+                margin-bottom: 25px;
+                width: 100%;
+                padding: 15px;
+                border: none;
+                border-bottom: 1px solid $gray-v1;
+                background-color: $gray;
+            }
+
+            textarea {
+                display: block;
+                margin-bottom: 25px;
+                width: 100%;
+                padding: 15px;
+                border: none;
+                border-bottom: 1px solid $gray-v1;
+                background-color: $gray;
+                resize: none;
+            }
+
+            button {
+                width: 100%;
+                padding: 15px;
+                background-color: $blue;
+                color: $white;
+                font-weight: bold;
+                font-size: 20px;
+                border: none;
+                cursor: pointer;
+            }
+
+            input:focus , textarea:focus {
+                outline: none;
+                counter-reset: $blue-v1;
+            } 
+    
+        }
+    }
+}
+

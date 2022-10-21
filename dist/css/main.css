@@ -1601,4 +1601,97 @@ header .container > ul .li-mega .mega .links-mega > li a svg {
 }
 .awesome .container .awesome-card:hover::after {
   height: 100%;
+}
+
+.request {
+  display: flex;
+  min-height: 100vh;
+}
+@media (max-width: 845px) {
+  .request {
+    flex-direction: column;
+  }
+}
+
+.request .partOne {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 20px;
+  background-color: rgba(23, 135, 224, 0.968627451);
+  flex-basis: 50%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 845px) {
+  .request .partOne {
+    padding: 70px 0;
+  }
+}
+.request .partOne h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.request .partOne p {
+  line-height: 1.7;
+  max-width: 90%;
+  margin-bottom: 40px;
+}
+.request .partOne img {
+  max-width: 100%;
+  width: 300px;
+}
+
+.request .partTwo {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 845px) {
+  .request .partTwo {
+    padding: 50px 0;
+  }
+}
+.request .partTwo h2 {
+  font-size: 40px;
+  margin: 40px 0;
+}
+.request .partTwo form {
+  text-align: center;
+}
+.request .partTwo form input {
+  display: block;
+  margin-bottom: 25px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+.request .partTwo form textarea {
+  display: block;
+  margin-bottom: 25px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: #f9f9f9;
+  resize: none;
+}
+.request .partTwo form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #2196f3;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+.request .partTwo form input:focus, .request .partTwo form textarea:focus {
+  outline: none;
+  counter-reset: rgba(23, 135, 224, 0.968627451);
 }/*# sourceMappingURL=main.css.map */
